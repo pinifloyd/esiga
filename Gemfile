@@ -4,6 +4,9 @@ gem 'rails', '3.2.11'
 gem 'mysql2'
 gem 'jquery-rails'
 
+# Authentication
+gem 'devise'
+
 # Twitter Bottstrap
 gem 'therubyracer'
 gem 'less-rails'
