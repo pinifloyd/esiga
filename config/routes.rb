@@ -1,6 +1,8 @@
 Esiga::Application.routes.draw do
 
-  devise_for :users, skip: :registrations
+  devise_for :users, skip: :registrations, controllers: {
+    sessions: 'authentication/sessions'
+  }
 
   root to: 'home#index'
 

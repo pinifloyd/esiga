@@ -1,0 +1,6 @@
+ru:
+  devise:
+    failure:
+      user:
+        invalid: 'Неверный логин или пароль'
+        not_found_in_database: 'Неверный логин или пароль'
