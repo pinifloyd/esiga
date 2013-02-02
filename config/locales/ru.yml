@@ -1,11 +1,13 @@
 ru:
   base:
     site_name: 'Название-твоего-сайта'
-    login: 'Логин'
     password: 'Пароль'
     cancel: 'Отменить'
-  sign_in:
+    warning: 'Внимание!'
+  authentication:
     please_sign_in: 'Войдите'
     remember_me: 'Запомнить'
     forgot_your_password: 'Забыли пароль?'
     sign_in: 'Войти'
+    login: 'Логин'
+    reset_password_instructions: 'Восстановить'

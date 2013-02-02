@@ -1,0 +1,14 @@
+ru:
+  activerecord:
+    attributes:
+      user:
+        email: 'Логин'
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              not_found: 'не найден'
+  errors:
+    messages:
+      blank: 'не может быть пустым'
