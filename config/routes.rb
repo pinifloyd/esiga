@@ -8,7 +8,7 @@ Esiga::Application.routes.draw do
   root to: 'home#index'
 
   namespace :admin do
-    root to: 'home#index'
+    root to: 'dashboard#index'
     resources :categories
   end
 

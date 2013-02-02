@@ -1,0 +1,7 @@
+ru:
+  admin:
+    base:
+      cms: 'Панель администрирования'
+    navbar:
+      dashboard: 'Доска'
+      categories: 'Категории'
