@@ -2,28 +2,3 @@ ru:
   admin:
     base:
       cms: 'Панель администрирования'
-
-    navbar:
-      dashboard: 'Доска'
-      categories: 'Категории'
-
-    categories:
-      index:
-        page_header: 'Список категорий'
-        not_found: 'Категории не найдены'
-        add_new: 'Новая категория'
-      new:
-        page_header: 'Новая категория'
-        name_html: 'Название %{required}'
-        submit: 'Создать'
-        cancel: 'Назад'
-      edit:
-        page_header: 'Редактирование категории'
-        name_html: 'Название %{required}'
-        submit: 'Сохранить'
-        cancel: 'Отменить'
-      categories:
-        name: 'Название'
-        actions: 'Действия'
-        edit: 'Изменить'
-        delete: 'Удалить'
