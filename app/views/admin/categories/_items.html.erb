@@ -1,0 +1,19 @@
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th><%= t('.name') %></th>
+      <th><%= t('admin.base.actions') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td class='actions'>
+          <%= edit_button(edit_admin_category_path(category)) %>
+          <%= delete_button(admin_category_path(category)) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

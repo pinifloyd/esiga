@@ -1,18 +1,6 @@
 <div class='row'>
   <div class='span12'>
-    <div class='page-header'>
-      <%= content_tag :h1 do %>
-        <%= t('.page_header') %>
-        <%= add_button_header(new_admin_category_path) %>
-      <% end %>
-    </div>
-
-    <% if @categories.empty? %>
-      <div class='alert'>
-        <%= t('.not_found') %>
-      </div>
-    <% else %>
-      <%= render 'categories' %>
-    <% end %>
+    <%= page_header(new_admin_category_path) %>
+    <%= items_list(@categories) %>
   </div>
 </div>

@@ -18,8 +18,5 @@ ru:
         submit:      'Сохранить'
         cancel:      'Отменить'
 
-      categories:
-        name:    'Название'
-        actions: 'Действия'
-        edit:    'Изменить'
-        delete:  'Удалить'
+      items:
+        name: 'Название'

@@ -13,3 +13,7 @@ body {
 .btn i {
   padding-right: 5px;
 }
+
+.table .actions {
+  text-align: right;
+}
