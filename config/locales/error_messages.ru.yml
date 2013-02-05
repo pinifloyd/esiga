@@ -3,8 +3,14 @@ ru:
     attributes:
       user:
         email: 'Логин'
+
     errors:
       models:
+        category:
+          attributes:
+            name:
+              taken: 'должно быть уникальным'
+
         user:
           attributes:
             email:

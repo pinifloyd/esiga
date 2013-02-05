@@ -1,6 +1,9 @@
 ru:
   admin:
     categories:
+      base:
+        name: 'Название'
+
       index:
         page_header: 'Список категорий'
         not_found:   'Категории не найдены'
@@ -8,15 +11,10 @@ ru:
 
       new:
         page_header: 'Новая категория'
-        name_html:   'Название %{required}'
-        submit:      'Создать'
-        cancel:      'Назад'
 
       edit:
         page_header: 'Редактирование категории'
-        name_html:   'Название %{required}'
-        submit:      'Сохранить'
-        cancel:      'Отменить'
 
-      items:
-        name: 'Название'
+      form:
+        submit: 'Сохранить'
+        cancel: 'Отменить'
