@@ -1,4 +1,8 @@
 ru:
+  categories:
+    show:
+      not_found: 'В данной категории нет продуктов'
+
   admin:
     categories:
       base:

@@ -29,12 +29,12 @@ module Admin::NavbarHelper
   def navbar_item(name, url)
     scope = [ :admin, :shared, :navbar ]
 
-    content_tag :li, current_item?(name) do
+    content_tag :li, current_item(name) do
       link_to t(name, scope: scope), url
     end
   end
 
-  def current_item?(name)
+  def current_item(name)
     if controller_name == name.to_s
       return { class: 'active' }
     end

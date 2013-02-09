@@ -2,7 +2,18 @@
  *= require twitter_bootstrap
 */
 
-.nav-tabs i {
+.nav-tabs .active a,
+.nav-tabs .active a:hover,
+.nav-tabs .active a i {
+  color: #FFFFFF;
+}
+
+.nav-tabs .active a,
+.nav-tabs .active a:hover {
+  background-color: #0088CC;
+}
+
+.nav-tabs a i {
   color: #B3B3B3;
   margin-top: 5px;
   margin-right: -6px;

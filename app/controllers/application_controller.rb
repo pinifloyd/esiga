@@ -2,12 +2,16 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-  helper_method :nav_categories
+  helper_method :all_categories, :current_category
 
   private
 
-  def nav_categories
-    @nav_categories ||= Category.all
+  def all_categories
+    @categories ||= Category.all
+  end
+
+  def current_category
+    # Abstract method
   end
 
 end

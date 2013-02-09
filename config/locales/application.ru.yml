@@ -1,13 +1,7 @@
 ru:
   base:
     site_name: 'Название-твоего-сайта'
-    password: 'Пароль'
-    cancel: 'Отменить'
-    warning: 'Внимание!'
-  authentication:
-    please_sign_in: 'Войдите'
-    remember_me: 'Запомнить'
-    forgot_your_password: 'Забыли пароль?'
-    sign_in: 'Войти'
-    login: 'Логин'
-    reset_password_instructions: 'Восстановить'
+    password:  'Пароль'
+    cancel:    'Отменить'
+    warning:   'Внимание!'
+    home_page: 'Тут будут новости или что-то вроде того'
