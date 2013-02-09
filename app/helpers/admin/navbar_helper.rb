@@ -18,7 +18,8 @@ module Admin::NavbarHelper
 
   def navbar_left_items
     { dashboard:  admin_root_path,
-      categories: admin_categories_path }
+      categories: admin_categories_path,
+      products:   admin_products_path }
   end
 
   def navbar_right_items

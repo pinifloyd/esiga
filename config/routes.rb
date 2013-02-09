@@ -12,6 +12,7 @@ Esiga::Application.routes.draw do
   namespace :admin do
     root to: 'dashboard#index'
     resources :categories, except: :show
+    resources :products
   end
 
 end

@@ -10,5 +10,6 @@ ru:
       navbar:
         dashboard:  'Доска'
         categories: 'Категории'
+        products:   'Продукты'
         sign_out:   'Выйти'
         front_end:  'Каталог'

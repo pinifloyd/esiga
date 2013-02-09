@@ -1,0 +1,19 @@
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th><%= t('admin.products.base.name') %></th>
+      <th><%= t('admin.base.actions') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td class='actions'>
+          <%= edit_button(edit_admin_product_path(product)) %>
+          <%= delete_button(admin_product_path(product)) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

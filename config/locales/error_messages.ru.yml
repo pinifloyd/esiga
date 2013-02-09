@@ -6,6 +6,11 @@ ru:
 
     errors:
       models:
+        product:
+          attributes:
+            name:
+              taken: 'должно быть уникальным'
+
         category:
           attributes:
             name:

@@ -1,0 +1,6 @@
+<%= f.fields_container :name do %>
+  <%= f.required_label :name, t('admin.products.base.name') %>
+  <%= f.text_field :name %>
+<% end %>
+
+<%= form_actions(admin_products_path) %>

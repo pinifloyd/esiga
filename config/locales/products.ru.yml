@@ -1,0 +1,20 @@
+ru:
+  admin:
+    products:
+      base:
+        name: 'Название'
+
+      index: 
+        page_header: 'Список продуктов'
+        not_found:   'Продукты не найдены'
+        add_new:     'Новый продукт'
+
+      new:
+        page_header: 'Новый продукт'
+
+      edit:
+        page_header: 'Редактирование продукта'
+
+      form:
+        submit: 'Сохранить'
+        cancel: 'Отменить'
