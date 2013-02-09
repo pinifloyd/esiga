@@ -1,4 +1,10 @@
 ru:
+  shared:
+    navbar:
+      admin_cms: 'CMS'
+      sign_out:  'Выйти'
+      sign_in:   'Войти'
+
   admin:
     shared:
       navbar:
