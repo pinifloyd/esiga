@@ -1,6 +1,7 @@
 module ApplicationHelper
 
   include BootstrapFormHelper
+  include NavigationTabsHelper
 
   def authentication_error_messages
     return '' if resource.errors.empty?
