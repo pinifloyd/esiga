@@ -1,5 +1,8 @@
 ru:
   admin:
-    navbar:
-      dashboard: 'Доска'
-      categories: 'Категории'
+    shared:
+      navbar:
+        dashboard:  'Доска'
+        categories: 'Категории'
+        sign_out:   'Выйти'
+        front_end:  'Каталог'

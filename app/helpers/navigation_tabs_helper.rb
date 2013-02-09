@@ -3,11 +3,13 @@ module NavigationTabsHelper
   def nav_tabs
     return if nav_categories.blank?
 
-    content_tag(:ul, class: 'nav nav-tabs nav-stacked') do
+    content_tag :ul, class: 'nav nav-tabs nav-stacked' do
       safe_join \
         nav_categories.map{ |category| nav_tab(category) }
     end
   end
+
+  private
 
   def nav_tab(category)
     icon_class = 'icon-chevron-right pull-right'
