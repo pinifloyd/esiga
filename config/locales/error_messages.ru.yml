@@ -10,6 +10,11 @@ ru:
           attributes:
             name:
               taken: 'должно быть уникальным'
+            price:
+              greater_than:             'должно быть положительным'
+              greater_than_or_equal_to: 'должно быть положительным'
+              not_an_integer:           'должно быть целым'
+              not_a_number:             'должно быть числом'
 
         category:
           attributes:

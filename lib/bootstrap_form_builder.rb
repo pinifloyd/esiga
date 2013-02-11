@@ -3,27 +3,33 @@ class BootstrapFormBuilder < ActionView::Helpers::FormBuilder
   delegate :content_tag, :safe_join, to: :@template
 
   CSS = {
-    input:     'controls',
-    error:     'error',
-    message:   'help-inline',
+    input:     %w(controls),
+    error:     %w(error),
+    message:   %w(help-inline),
     container: %w(control-group),
     label:     %w(control-label),
     required:  %w(label label-important)
   }
 
-  def text_field(method, options = {})
-    content_tag(:div, class: CSS[:input]) do
-      safe_join([
-        super(method, options), error_message(method, options)
-      ])
+  FORM_FIELDS = %w(text_field number_field)
+
+  FORM_FIELDS.each do |form_field|
+    define_method(form_field) do |method, *args|
+      options = args.extract_options!
+
+      content_tag(:div, item_class(:input)) do
+        safe_join([
+          super(method, options), error_message(method, options)
+        ])
+      end
     end
   end
 
   def label(method, *args, &block)
     options = args.extract_options!
 
-    options[:class] = \
-      fetch_item_class(:label, options[:class])
+    options.merge! \
+      item_class(:label, options[:class])
 
     super(method, *(args << options), &block)
   end
@@ -31,19 +37,17 @@ class BootstrapFormBuilder < ActionView::Helpers::FormBuilder
   def required_label(method, *args, &block)
     unless args.first.blank? || args.first.is_a?(Hash)
       args.unshift \
-        content_tag(:span, args.shift, class: CSS[:required])
+        content_tag(:span, args.shift, item_class(:required))
     end
 
     label(method, *args, &block)
   end
 
   def fields_container(method, &block)
-    unless object.errors[method].blank?
-      container_class = \
-        fetch_item_class(:container, CSS[:error])
-    end
+    container_class = item_class :container,
+      object.errors[method].blank? ? nil : CSS[:error]
 
-    content_tag(:div, class: container_class, &block)
+    content_tag(:div, container_class, &block)
   end
 
   private
@@ -54,18 +58,17 @@ class BootstrapFormBuilder < ActionView::Helpers::FormBuilder
     message = object.errors[method].try(:first)
 
     unless message.blank?
-      content_tag(:span, message, class: CSS[:message])
+      content_tag(:span, message, item_class(:message))
     end
   end
 
-  def fetch_item_class(item, custom_class)
-    item_class = CSS[item]
+  def item_class(item, custom_class = nil)
+    custom_class = custom_class.is_a?(Hash) ? \
+      nil : Array.wrap(custom_class).split.flatten
 
-    if custom_class.is_a?(String)
-      item_class |= custom_class.split
-    end
+    item_class = safe_join (CSS[item] | custom_class), ' '
 
-    safe_join(item_class, ' ')
+    return { class:  item_class }
   end
 
 end

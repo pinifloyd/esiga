@@ -18,7 +18,8 @@ ActiveRecord::Schema.define(:version => 20130209110737) do
   end
 
   create_table "products", :force => true do |t|
-    t.string "name"
+    t.string  "name",  :null => false
+    t.integer "price"
   end
 
   create_table "users", :force => true do |t|
