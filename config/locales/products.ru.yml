@@ -2,9 +2,10 @@ ru:
   admin:
     products:
       base:
-        name: 'Название'
+        name:  'Название'
+        price: 'Цена'
 
-      index: 
+      index:
         page_header: 'Список продуктов'
         not_found:   'Продукты не найдены'
         add_new:     'Новый продукт'
