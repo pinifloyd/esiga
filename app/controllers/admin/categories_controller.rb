@@ -1,4 +1,4 @@
-class Admin::CategoriesController < Admin::BaseController
+class Admin::CategoriesController < Admin::AdminController
 
   before_filter :new_category,  only: [ :new, :create ]
   before_filter :load_category, only: [ :edit, :update, :destroy ]

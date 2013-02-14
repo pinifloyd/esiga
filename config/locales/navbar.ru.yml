@@ -1,9 +1,11 @@
 ru:
   shared:
     navbar:
-      admin_cms: 'CMS'
-      sign_out:  'Выйти'
-      sign_in:   'Войти'
+      admin_cms:  'CMS'
+      sign_out:   'Выйти'
+      sign_in:    'Войти'
+      home:       'Главная'
+      categories: 'Категории'
 
   admin:
     shared:

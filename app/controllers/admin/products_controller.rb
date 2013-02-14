@@ -1,4 +1,4 @@
-class Admin::ProductsController < Admin::BaseController
+class Admin::ProductsController < Admin::AdminController
 
   before_filter :new_product,  only: [ :new, :create ]
   before_filter :load_product, only: [ :edit, :update, :destroy ]

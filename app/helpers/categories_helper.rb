@@ -1,21 +1,19 @@
-module NavigationTabsHelper
+module CategoriesHelper
 
-  def nav_tabs
-    return if all_categories.blank?
-
+  def categories_nav
     content_tag :ul, class: 'nav nav-tabs nav-stacked' do
       safe_join \
-        all_categories.map{ |category| nav_tab(category) }
+        @categories.map{ |category| category_tab(category) }
     end
   end
 
   private
 
-  def nav_tab(category)
-    icon_class = 'icon-chevron-right pull-right'
+  def category_tab(category)
+    icon_class = 'chevron-right pull-right'
 
     content = safe_join([
-      content_tag(:i, nil, class: icon_class), category.name
+      glyph(icon_class), category.name
     ])
 
     content_tag :li, current_tab(category) do
@@ -24,7 +22,7 @@ module NavigationTabsHelper
   end
 
   def current_tab(category)
-    if category == current_category
+    if category == @category
       return { class: 'active' }
     end
   end

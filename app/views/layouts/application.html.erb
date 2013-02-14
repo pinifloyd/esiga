@@ -6,12 +6,12 @@
     <div class='container'>
       <div class='row'>
         <%= render 'shared/navbar' %>
-        <%= render 'shared/sidebar' %>
 
-        <div class='span9'>
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
+        <% if content_for?(:sidebar) %>
+          <%= render 'shared/with_sidebar' %>
+        <% else %>
+          <%= render 'shared/without_sidebar' %>
+        <% end %>
       </div>
 
       <%= render 'shared/footer' %>

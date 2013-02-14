@@ -1,12 +1,6 @@
 <div class='navbar'>
   <div class='navbar-inner'>
-    <ul class='nav pull-right'>
-      <% if current_user %>
-        <li><%= link_to t('.admin_cms'), admin_root_path %></li>
-        <li><%= link_to t('.sign_out'), destroy_user_session_path %></li>
-      <% else %>
-        <li><%= link_to t('.sign_in'), new_user_session_path %></li>
-      <% end %>
-    </ul>
+    <%= navbar_left_menu %>
+    <%= navbar_right_menu %>
   </div>
 </div>

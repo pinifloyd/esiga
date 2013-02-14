@@ -1,4 +1,6 @@
-module Admin::BaseHelper
+module Admin::AdminHelper
+
+  include Common::AllHelper
 
   include Admin::NavbarHelper
   include Admin::HappyLinksHelper

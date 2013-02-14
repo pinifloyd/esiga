@@ -1,8 +1,8 @@
-module BootstrapFormHelper
+module Common::BootstrapFormHelper
 
   def horizontal_form_class(custom_class)
     form_class = %w(form-horizontal)
-    
+
     if custom_class.respond_to?(:split)
       form_class |= custom_class.split
     end

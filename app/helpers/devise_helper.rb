@@ -1,6 +1,6 @@
-module AuthenticationHelper
+module DeviseHelper
 
-  def authentication_error_messages
+  def devise_error_messages!
     return '' if resource.errors.empty?
 
     content_tag(:div, class: 'alert fade in alert-error') do

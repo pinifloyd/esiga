@@ -1,7 +1,7 @@
 module ApplicationHelper
 
-  include BootstrapFormHelper
-  include NavigationTabsHelper
-  include ContentHelper
+  include Common::AllHelper
+
+  include NavigationHelper
 
 end
