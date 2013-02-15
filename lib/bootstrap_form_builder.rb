@@ -11,7 +11,7 @@ class BootstrapFormBuilder < ActionView::Helpers::FormBuilder
     required:  %w(label label-important)
   }
 
-  FORM_FIELDS = %w(text_field number_field)
+  FORM_FIELDS = %w(text_field number_field collection_select select)
 
   FORM_FIELDS.each do |form_field|
     define_method(form_field) do |method, *args|
@@ -19,7 +19,8 @@ class BootstrapFormBuilder < ActionView::Helpers::FormBuilder
 
       content_tag(:div, item_class(:input)) do
         safe_join([
-          super(method, options), error_message(method, options)
+          super(method, *(args << options)),
+          error_message(method, options)
         ])
       end
     end
