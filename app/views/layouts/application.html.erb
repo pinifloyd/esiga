@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Esiga</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang='ru'>
+  <%= render 'shared/head' %>
 
-<%= yield %>
+  <body>
+    <div class='container'>
+      <div class='row'>
+        <%= render 'shared/navbar' %>
 
-</body>
+        <% if content_for?(:sidebar) %>
+          <%= render 'shared/with_sidebar' %>
+        <% else %>
+          <%= render 'shared/without_sidebar' %>
+        <% end %>
+      </div>
+
+      <%= render 'shared/footer' %>
+   </div>
+
+   <%= render 'shared/javascripts' %>
+  </body>
 </html>

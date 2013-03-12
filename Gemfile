@@ -1,26 +1,38 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'mysql2'
+gem 'jquery-rails'
 
+# Authentication
+gem 'devise'
+
+# Twitter Bottstrap
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier',     '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+# Gems used only for development environment
+group :development do
+  gem 'thin'
+  gem 'pry'
+  gem 'pry-doc'
+  gem 'pry-rails'
+end
+
+# Gems used only for test environment
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

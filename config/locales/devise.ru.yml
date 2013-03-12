@@ -1,0 +1,14 @@
+ru:
+  devise:
+    failure:
+      user:
+        invalid: 'Неверный логин или пароль'
+        not_found_in_database: 'Неверный логин или пароль'
+        unauthenticated: 'Доступ запрещен, авторизуйтесь'
+    passwords:
+      user:
+        send_instructions: 'Инструкции высланы'
+    sessions:
+      user:
+        signed_in: 'Вход выполнен'
+        signed_out: 'Выход выполнен'

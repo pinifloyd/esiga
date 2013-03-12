@@ -1,0 +1,17 @@
+ru:
+  shared:
+    navbar:
+      admin_cms:  'CMS'
+      sign_out:   'Выйти'
+      sign_in:    'Войти'
+      home:       'Главная'
+      categories: 'Категории'
+
+  admin:
+    shared:
+      navbar:
+        dashboard:  'Доска'
+        categories: 'Категории'
+        products:   'Продукты'
+        sign_out:   'Выйти'
+        front_end:  'Каталог'

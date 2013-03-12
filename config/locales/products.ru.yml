@@ -1,0 +1,24 @@
+ru:
+  admin:
+    products:
+      base:
+        name:     'Название'
+        price:    'Цена'
+        category: 'Категория'
+
+      index:
+        page_header: 'Список продуктов'
+        not_found:   'Продукты не найдены'
+        add_new:     'Новый продукт'
+
+      new:
+        page_header: 'Новый продукт'
+
+      edit:
+        page_header: 'Редактирование продукта'
+        category_id: 'Категория'
+
+      form:
+        submit:          'Сохранить'
+        cancel:          'Отменить'
+        select_category: 'Выберите категорию'

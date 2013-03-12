@@ -1,0 +1,18 @@
+<% scope = [ :admin, :products, :base ] %>
+
+<%= f.fields_container :name do %>
+  <%= f.required_label :name, t(:name, scope: scope) %>
+  <%= f.text_field :name %>
+<% end %>
+
+<%= f.fields_container :category_id do %>
+  <%= f.label :category, t(:category, scope: scope) %>
+  <%= f.select :category_id, Category.for_select, include_blank: t('.select_category') %>
+<% end if category_exists? %>
+
+<%= f.fields_container :price do %>
+  <%= f.label :price, t(:price, scope: scope) %>
+  <%= f.number_field :price, min: 0 %>
+<% end %>
+
+<%= form_actions(admin_products_path) %>

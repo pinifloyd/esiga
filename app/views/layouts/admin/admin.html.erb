@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang='ru'>
+  <%= render 'admin/shared/head' %>
+
+  <body>
+    <%= render 'admin/shared/navbar' %>
+
+    <div class='container'>
+      <%= bootstrap_flash %>
+      <%= yield %>
+    </div>
+
+    <%= render 'shared/javascripts' %>
+  </body>
+</html>

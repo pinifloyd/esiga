@@ -1,0 +1,24 @@
+ru:
+  categories:
+    show:
+      not_found: 'В данной категории нет продуктов'
+
+  admin:
+    categories:
+      base:
+        name: 'Название'
+
+      index:
+        page_header: 'Список категорий'
+        not_found:   'Категории не найдены'
+        add_new:     'Новая категория'
+
+      new:
+        page_header: 'Новая категория'
+
+      edit:
+        page_header: 'Редактирование категории'
+
+      form:
+        submit: 'Сохранить'
+        cancel: 'Отменить'
